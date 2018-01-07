@@ -22,7 +22,7 @@ import times
 import requests
 import flickr_api
 
-config = json.load(open('./painladen.config'))
+config = json.load(open('config.json.default'))
 
 TAG = 'philMeta'
 API_KEY = config['flickr_api_key']
@@ -114,7 +114,7 @@ def search(query='pain'):
               'content_type': '1',  # just photos
               'privacy_filter': '1',  # public photos
               'license': '1,2,4,5',  # see README.md
-              'per_page': '500',  # max=500
+              'per_page': '5',  # max=500
               'sort': 'relevance',
               'method': 'flickr.photos.search',
               'format': 'json'}
